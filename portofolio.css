@@ -162,7 +162,7 @@ a {
     padding: 20px 0;
 }
 
-/*- -Grid for large displays-*/
+/*=== -Grid for large displays ===*/
 
 @media all and (min-width: 1600px) {
     .projects-container {
@@ -175,6 +175,7 @@ a {
         max-width: 50%;
     }
 }
+/*- =================================================-*/
 
 .project-items {
     height: 420px;
