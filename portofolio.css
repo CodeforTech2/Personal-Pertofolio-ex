@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: rgb(244, 244, 244);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+/*- Welcome section, first page of the portofolio -*/
+
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(45, 45, 45), rgb(27, 27, 27));
+}
+
+.welcome-text {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+} 
+
+.welcome-text h1 {
+    font-size: 4em;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    animation: 3s header;
+}
+
+@keyframes header {
+    0%{
+        margin-bottom: 90%;
+        font-size: 10px;
+        color:rgb(0, 0, 0);
+    }
+
+    50% {
+        color:rgb(209, 83, 83);
+    }
+
+    100% {
+        margin-bottom: 0;
+        font-size: 4em;
+    }
+}
+
+.welcome-text p {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    font-style: italic;
+    color: rgb(197, 61, 88);
+    font-family: monospace;
+    animation: 2s para;
+}
+
+@keyframes para {
+    0% {
+        transform: rotate(100deg);
+        margin-top: 100%;
+    }
+    100% {
+        transform: rotate(360deg);
+        margin-top: 0;
+    }
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    font-size: 22px;
+    background: rgb(197, 61, 88);
+    animation: 3s slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-right: 100%;
+        width: 200%;
+    }
+    to {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar li {
+    list-style-type: none;
+    color: rgb(244, 244, 244);
+    padding: 20px 20px;
+    
+}
+
+#navbar li:hover {
+    background: linear-gradient(rgb(49, 46, 46), rgb(4, 157, 159), rgb(42, 39, 39));
+}
+
+
+/*- -Projects section, the list of my projects portofolio -*/
+
+#projects {
+    width: 100%;
+    background: linear-gradient(rgb(49, 46, 46), rgb(4, 157, 159), rgb(42, 39, 39));
+    padding-bottom: 50px;
+}
+
+.project-title {
+    text-align: center;
+    color: var(--white);
+    font-size: 2.5em;
+    padding-top: 80px;
+}
+
+.line {
+    width: 38%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(1, 191, 212);;
+}
+
+.project-subtitle {
+    text-align: center;
+    color: var(--white);
+    font-size: 1.6em;
+    font-style: italic;
+    padding: 20px;
+    
+    font-family: monospace;
+}
+
+.projects-container {
+    display: grid;
+    max-width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    padding: 20px 0;
+}
+
+.project-items {
+    height: 420px;
+    background-color: rgb(36, 44, 44);
+    margin: 15px;
+    box-shadow: 0 0 5px 1px rgb(9, 114, 114);
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+.project-items:hover {
+    transform: translateY(-5px);
+    border-radius: 3px;
+    box-shadow: 0 5px 7px 1px rgba(0, 217, 255, 0.75), 0 6px 9px 2px rgba(221, 1, 255, 0.75);
+}
+
+.project-items a {
+    text-decoration: none;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+.picture {
+    width: 100%;
+    height: calc(100% - 66px);
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.project-description {
+    font-size: 22px;
+    padding: 12px;
+    text-align: center;
+}
+
+.p-span {
+    color: rgb(36, 44, 44);
+    transition: color 0.3s ease-out;
+}
+
+/* Color an element part of a large section on hover it */
+.project-items:hover .p-span {
+    color: orange;
+}
+
+.show-all {
+    background-color: rgb(9, 114, 114);
+    color: var(--white);
+    font-size: 18px;
+    padding: 10px;
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.show-all:hover {
+    box-shadow: 0 3px 3px 1px rgba(0, 217, 255, 0.75);
+}
+
+.fa-solid {
+    margin-left: 8px;
+}
+
+.show-all:hover {
+    background-color: rgb(197, 61, 88);
+}
+
+.show-all:hover .fa-solid {
+    transform: translate(5px);
+    transition: all 0.3s ease;
+}
+
+/*-Profile, the links where the visitors cand find me -*/
+#profile-link {
+    height: 80vh;
+    background-color: rgb(5, 76, 84);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-title {
+    color: var(--white);
+    font-size: 3.5em;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.profile-subtitle {
+    color: var(--white);
+    font-size: 1.6em;
+    font-style: italic;
+    padding-bottom: 30px;
+    font-family: monospace;
+}
+
+.social-link {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 40px;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+
+.social-link li {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5em;   
+    transition: all 0.3s ease-out;
+}
+
+.social-link li:hover {
+    transform: translateY(10px);
+}
+
+/*-Footer -*/
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 50px;
+    height: 15vh;
+    background-color: rgb(5, 76, 84);
+    justify-content: space-around;
+    align-items: center;
+    border-top: 3px solid rgb(1, 191, 212);
+}
+
+.footer p {
+    color: var(--white);
+    font-size: 1.2em;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer a:hover {
+    color: rgb(1, 191, 212);
+}
+
+/*----- Media queries -------- -*/
+
+@media all and (max-width: 900px) {
+    .social-link {
+        max-width: 60%;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .social-link {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-title {
+        font-size: 3em;
+        text-align: center;
+    }
+    .profile-subtitle, .footer {
+        text-align: center;
+    }
+   .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   #navbar {
+    position: relative !important;
+   }
+}
