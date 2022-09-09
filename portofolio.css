@@ -162,6 +162,20 @@ a {
     padding: 20px 0;
 }
 
+/*- -Grid for large displays-*/
+
+@media all and (min-width: 1600px) {
+    .projects-container {
+        max-width: 60%;
+    }
+}
+
+@media all and (min-width: 2230px) {
+    .projects-container {
+        max-width: 50%;
+    }
+}
+
 .project-items {
     height: 420px;
     background-color: rgb(36, 44, 44);
